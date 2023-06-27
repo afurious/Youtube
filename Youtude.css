@@ -1,0 +1,133 @@
+:root{
+    --primary: linear-gradient(to bottom right, #0a0057, #3f00ee);
+    --secondary:gold;
+    --text:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+   min-height: 100vh;
+   background-image: var(--primary);
+   font-family: sans-serif;
+   color: var(--text);
+   display: flex;
+   align-items: center;
+   
+}
+
+.container{
+    width: 100vh;
+   display: grid;
+   grid-template-columns: 1.8fr 1.2fr;
+   gap: 1rem;
+   padding: .5rem 1rem;
+   text-transform: capitalize;
+  
+}
+
+@media screen and (max-width:990px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+.title{
+    width: 20rem;
+}
+.left > p {
+    color: var(--secondary);
+    margin-top: 3px;
+}
+.left h3{
+    margin-left: 20px;
+}
+.left p{
+    margin-left: 20px;
+}
+
+.video{
+    display: flex;
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+   background: var(--primary);
+   height: 3rem;
+   width: 32rem;
+   padding: 5px;
+   border-radius: 20px;
+   
+
+}
+
+.video h3{
+    white-space: nowrap;
+    width: 19rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 100 1rem sans-serif;
+    padding: 0.5rem;
+}
+.leftside{
+   
+    /* height: ; */
+}
+
+/* .videos{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: var(--primary);
+   height: 3rem;
+   width: 32rem;
+   padding: 5px;
+   border-radius: 20px;} */
+   
+.video:hover{
+    background: rgb(104, 104, 157);
+}
+.video.active{
+  background: rgb(15, 15, 78);
+  color: var(--secondary);
+}
+
+.leftside{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 40%;
+    overflow-y:auto;
+
+}
+.leftside::-webkit-scrollbar{
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #0005;
+}
+.leftside::-webkit-scrollbar-thumb{
+    border-radius: .4rem;
+    background-color: #fff ;
+}
+
+
+
+.video img{
+    height: 30px;
+    width: 30px;
+    filter: invert(100%);
+}
+.video.active img {
+    filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(369deg);
+}
+video{
+    height: 20rem;
+    width: 20rem;
+}
+
+
